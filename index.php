@@ -18,4 +18,12 @@ var_dump($rnp->config);
 
 if (!isset($_POST['rnp_submit'])) {
     echo $rnp->showForm(array());
+} else {
+    $buildStatus = $rnp->build($_POST);
+    if ($buildStatus !== true) {
+        echo '<p class="error">'.$buildStatus.'</p>';
+        echo $rnp->showForm($_POST);
+    } else {
+        echo $rnp->showForm(array());
+    }
 }
