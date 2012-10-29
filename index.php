@@ -8,6 +8,10 @@ $modxRoots = array(
     1 => array(
         'name' => 'Latest Stable',
         'path' => dirname(dirname(dirname(__FILE__))) . '/modx-stable/'
+    ),
+    2 => array(
+        'name' => 'modx-stable2',
+        'path' => dirname(dirname(dirname(__FILE__))) . '/modx-stable2/'
     )
 );
 
